@@ -1,0 +1,14 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: py-hnts-pm
+  namespace: default
+  labels:
+    release: prom-stack
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: py-hnts-dp
+  podMetricsEndpoints:
+    - port: py-hnts-exp

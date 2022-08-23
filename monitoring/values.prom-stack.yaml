@@ -1,0 +1,12 @@
+alertmanager:
+  enabled: false
+
+grafana:
+  enabled: false
+
+prometheus:
+  enabled: true
+  ingress:
+    enabled: true
+    hosts:
+      - prom.internal
